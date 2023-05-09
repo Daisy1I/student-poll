@@ -4,7 +4,10 @@ const pollController = require('../controllers/pollController.js'); // load our 
 
 router.get('/joblist', pollController.jobList); // route to load the job list
 router.post('/poll', pollController.poll); // route to post the job selection of the user
-router.get('/results', pollController.results); // route to load the poll result data for the chart
+router.post('/results', pollController.results); // route to load the poll result data for the chart
 
 // make the above code accessible for other code modules
 module.exports = router;
+
+const refController = require('../controllers/refController.js');
+router.get('/school-list', refController.schoolList); // route to load the school list
